@@ -2017,6 +2017,7 @@ void mpiMulAccCore(uint_t *r, const uint_t *a, int_t m, const uint_t b)
 
 #endif
 
+#ifndef __KERNEL__
 
 /**
  * @brief Display the contents of a multiple precision integer
@@ -2044,5 +2045,7 @@ void mpiDump(FILE *stream, const char_t *prepend, const Mpi *a)
          fprintf(stream, "\r\n");
    }
 }
+
+#endif
 
 #endif

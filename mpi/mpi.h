@@ -32,7 +32,9 @@
 #define _MPI_H
 
 //Dependencies
-#include <stdio.h>
+#ifndef __KERNEL__
+   #include <stdio.h>
+#endif
 #include "core/crypto.h"
 
 //Maximum size, in bits, of a multiple precision integer (static memory allocation)
@@ -154,7 +156,9 @@ error_t mpiMontgomeryRed(Mpi *r, const Mpi *a, uint_t k, const Mpi *p, Mpi *t);
 
 void mpiMulAccCore(uint_t *r, const uint_t *a, int_t m, const uint_t b);
 
+#ifndef __KERNEL__
 void mpiDump(FILE *stream, const char_t *prepend, const Mpi *a);
+#endif
 
 //C++ guard
 #ifdef __cplusplus

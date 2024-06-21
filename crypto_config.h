@@ -1,0 +1,3 @@
+#define GPL_LICENSE_TERMS_ACCEPTED 1
+#define DH_SUPPORT 1
+#define HKDF_SUPPORT 1
